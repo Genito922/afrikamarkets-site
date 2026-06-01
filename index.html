@@ -64,9 +64,10 @@
   .plan ul li::before { content:'✓'; color: var(--gold); font-weight:700; flex-shrink:0; }
   .plan ul li.na { color: #3A3F47; }
   .plan ul li.na::before { content:'—'; color: #3A3F47; }
-  .plan-btn { display:block; text-align:center; padding: 11px; border-radius:7px; font-weight:600; font-size:13px; text-decoration:none; }
-  .plan-btn-outline { border: 0.5px solid var(--border); color: var(--text); }
+  .plan-btn { display:block; text-align:center; padding: 11px; border-radius:7px; font-weight:600; font-size:13px; text-decoration:none; cursor:pointer; border:none; width:100%; }
+  .plan-btn-outline { border: 0.5px solid var(--border); color: var(--text); background: transparent; }
   .plan-btn-gold { background: var(--gold); color: var(--dark); }
+  .plan-btn:hover { opacity: 0.85; }
   .trial-info { text-align:center; margin-top:2rem; font-size:12px; color: var(--muted); }
   .legal-section { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; display:none; }
   .legal-section.active { display:block; }
@@ -94,7 +95,7 @@
     <li><a onclick="show('terms')" style="cursor:pointer">Terms</a></li>
     <li><a onclick="show('privacy')" style="cursor:pointer">Privacy</a></li>
     <li><a onclick="show('refund')" style="cursor:pointer">Refund</a></li>
-    <li><a href="https://afrikamarkets-dashboard.streamlit.app" class="nav-cta" target="_blank">Free trial</a></li>
+    <li><a href="#pricing" class="nav-cta">Free trial</a></li>
   </ul>
 </nav>
 
@@ -104,7 +105,7 @@
     <h1>Invest in West Africa's <em>fastest growing</em> stock exchange</h1>
     <p>Real-time market intelligence, AI-powered scoring, and geopolitical risk monitoring for diaspora investors in Canada, France and USA.</p>
     <div class="hero-btns">
-      <a href="https://afrikamarkets-dashboard.streamlit.app" class="btn-primary" target="_blank">Start 14-day free trial</a>
+      <a href="#pricing" class="btn-primary">Start 14-day free trial</a>
       <a href="#features" class="btn-secondary">See how it works</a>
     </div>
     <p class="trial-note">No credit card required · Cancel anytime · Full access during trial</p>
@@ -153,9 +154,11 @@
       <h2 class="section-title" style="text-align:center;">Simple, transparent pricing</h2>
       <p class="section-sub" style="text-align:center;margin:0 auto 3rem;">All plans include a 14-day free trial. No credit card required.</p>
       <div class="pricing-grid">
+
+        <!-- STARTER -->
         <div class="plan">
           <p class="plan-name">Starter</p>
-          <p class="plan-price">$9<span>.99/mo</span></p>
+          <p class="plan-price">$29<span>.99/mo</span></p>
           <p class="plan-desc">For diaspora investors getting started with BRVM.</p>
           <ul>
             <li>Live BRVM market dashboard</li>
@@ -167,12 +170,17 @@
             <li class="na">Portfolio simulator</li>
             <li class="na">Weekly intelligence brief</li>
           </ul>
-          <a href="#" class="plan-btn plan-btn-outline" href="https://afrikamarkets-dashboard.streamlit.app" target="_blank">Start free trial</a>
+          <button class="plan-btn plan-btn-outline"
+            onclick="window.open('https://afrika-markets-stock.lemonsqueezy.com/buy/starter','_blank')">
+            Start free trial
+          </button>
         </div>
+
+        <!-- PRO -->
         <div class="plan popular">
           <div class="plan-badge">Most popular</div>
           <p class="plan-name">Pro</p>
-          <p class="plan-price">$24<span>.99/mo</span></p>
+          <p class="plan-price">$74<span>.99/mo</span></p>
           <p class="plan-desc">AI-powered edge for serious BRVM investors.</p>
           <ul>
             <li>Everything in Starter</li>
@@ -183,11 +191,16 @@
             <li>Weekly intelligence brief</li>
             <li class="na">1-on-1 market briefings</li>
           </ul>
-          <a href="#" class="plan-btn plan-btn-gold" href="https://afrikamarkets-dashboard.streamlit.app" target="_blank">Start free trial</a>
+          <button class="plan-btn plan-btn-gold"
+            onclick="window.open('https://afrika-markets-stock.lemonsqueezy.com/buy/pro','_blank')">
+            Start free trial
+          </button>
         </div>
+
+        <!-- EXPERT -->
         <div class="plan">
           <p class="plan-name">Expert</p>
-          <p class="plan-price">$49<span>.99/mo</span></p>
+          <p class="plan-price">$199<span>.99/mo</span></p>
           <p class="plan-desc">For financial advisors and high-conviction investors.</p>
           <ul>
             <li>Everything in Pro</li>
@@ -198,10 +211,14 @@
             <li>Client-ready PDF reports</li>
             <li>Early access to features</li>
           </ul>
-          <a href="#" class="plan-btn plan-btn-outline" href="https://afrikamarkets-dashboard.streamlit.app" target="_blank">Start free trial</a>
+          <button class="plan-btn plan-btn-outline"
+            onclick="window.open('https://afrika-markets-stock.lemonsqueezy.com/buy/expert','_blank')">
+            Start free trial
+          </button>
         </div>
+
       </div>
-      <p class="trial-info">All prices in USD · Billed monthly · Cancel anytime</p>
+      <p class="trial-info">All prices in USD · Billed monthly · Cancel anytime · Powered by Lemon Squeezy</p>
     </div>
   </section>
 </div>
@@ -216,7 +233,7 @@
   <h2>2. Not financial advice</h2>
   <p>Nothing on the Service constitutes financial, investment, legal, or tax advice. Always consult a qualified financial advisor before making investment decisions.</p>
   <h2>3. Subscriptions and billing</h2>
-  <p>Subscriptions are billed monthly. All plans include a 14-day free trial. After the trial, your subscription renews automatically unless cancelled.</p>
+  <p>Subscriptions are billed monthly. All plans include a 14-day free trial. After the trial, your subscription renews automatically unless cancelled. Billing is processed securely by Lemon Squeezy.</p>
   <h2>4. Governing law</h2>
   <p>Contact: <a href="mailto:legal@afrikamarkets.io">legal@afrikamarkets.io</a></p>
 </div>
@@ -227,7 +244,7 @@
   <h1>Privacy Policy</h1>
   <p class="legal-meta">Afrika Markets Intelligence · Last updated: May 28, 2026 · <a href="mailto:privacy@afrikamarkets.io">privacy@afrikamarkets.io</a></p>
   <h2>1. Information we collect</h2>
-  <p>Name, email, country, payment info (processed by payment provider), usage data.</p>
+  <p>Name, email, country, payment info (processed by Lemon Squeezy), usage data.</p>
   <h2>2. Data sharing</h2>
   <p>We do not sell your personal data.</p>
   <h2>3. GDPR and PIPEDA</h2>
